@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./gradlew ktlint",
+    "lint": "./gradlew ktlint detekt",
     "build": "./gradlew clean build",
     "test": "./gradlew test",
     "release": "standard-version",
