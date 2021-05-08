@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "./gradlew ktlint",
     "build": "./gradlew clean build",
     "test": "./gradlew test",
     "release": "standard-version",
@@ -25,8 +26,7 @@
     "skipCI": false,
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run test build",
-      "pre-push": "npm run test"
+      "pre-commit": "npm run lint test build"
     }
   },
   "repository": {
