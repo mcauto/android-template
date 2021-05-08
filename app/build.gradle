@@ -46,8 +46,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // Detekt
     detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:1.16.0"
-    detektPlugins "io.gitlab.arturbosch.detekt:detekt-bom:1.16.0"
+    // Memory leak detection
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 }
 
 // detekt
