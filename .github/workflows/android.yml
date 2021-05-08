@@ -10,6 +10,12 @@ jobs:
         java-version: 11
     - name: Make Gradle executable
       run: chmod +x ./gradlew
+    - name: Kotlin Lint with Gradle
+      run: ./gradlew ktlint
+    - name: Kotlin static code analysis with Gradle
+      run: ./gradlew detekt
+    - name: Test Debug APK
+      run: ./gradlew test
     - name: Build with Gradle
       run: ./gradlew build
     - name: Build Debug APK
